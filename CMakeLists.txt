@@ -1,9 +1,12 @@
-cmake_minimum_required(VERSION 4.31)
+cmake_minimum_required(VERSION 3.25)
 project(hashtable C)
 
-set(CMAKE_C_STANDARD 11)
+add_library(hashtable STATIC
+        src/hash_table_lifecycle.c
+        src/hash_pair_lifecycle.c
+)
 
-add_executable(hashtable main.c)
+set(CMAKE_C_STANDARD 11)
 
 target_include_directories(hashtable PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
