@@ -5,7 +5,9 @@
 
 struct HashPair {
     void* key;
+    size_t key_length;
     void* value;
+    size_t value_length;
 };
 
 struct HashTable {

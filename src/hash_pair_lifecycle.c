@@ -12,7 +12,9 @@ extern HashPair_t* hash_table_pair_create(void* key, size_t key_length, void* va
     memcpy(value_copy, value, value_length);
 
     hash_pair->key = key_copy;
+    hash_pair->key_length = key_length;
     hash_pair->value = value_copy;
+    hash_pair->value_length = value_length;
 
     return hash_pair;
 }
