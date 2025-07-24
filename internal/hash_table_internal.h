@@ -4,8 +4,8 @@
 #include "hash_table.h"
 
 struct HashPair {
-    void* data;
-    size_t value_offset;
+    void* key;
+    void* value;
 };
 
 struct HashTable {
